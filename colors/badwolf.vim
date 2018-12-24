@@ -58,7 +58,7 @@ let s:bwc = {}
 
 " The most basic of all our colors is a slightly tweaked version of the Molokai
 " Normal text.
-let s:bwc.plain = ['f8f6f2', 15]
+let s:bwc.plain = ['fafafa', 15]
 
 " Pure and simple.
 let s:bwc.snow = ['ffffff', 15]
@@ -177,7 +177,7 @@ endif
 
 " General/UI {{{
 
-call s:HL('Normal', 'plain', 'blackgravel')
+call s:HL('Normal', 'plain', 'coal')
 
 call s:HL('Folded', 'mediumgravel', 'bg', 'none')
 
@@ -196,7 +196,7 @@ call s:HL('MatchParen', 'dalespale', 'darkgravel', 'bold')
 call s:HL('NonText',    'deepgravel', 'bg')
 call s:HL('SpecialKey', 'deepgravel', 'bg')
 
-call s:HL('Visual',    '',  'deepgravel')
+call s:HL('Visual',    '',  'snow')
 call s:HL('VisualNOS', '',  'deepgravel')
 
 call s:HL('Search',    'coal', 'dalespale', 'bold')
@@ -244,7 +244,7 @@ call s:HL('iCursor', 'coal', 'tardis', 'none')
 call s:HL('Special', 'plain')
 
 " Comments are slightly brighter than folds, to make 'headers' easier to see.
-call s:HL('Comment',        'gravel')
+call s:HL('Comment',        'lightgravel')
 call s:HL('Todo',           'snow', 'bg', 'bold')
 call s:HL('SpecialComment', 'snow', 'bg', 'bold')
 
@@ -647,4 +647,10 @@ call s:HL('VimBracket', 'dress', '', 'none')
 " }}}
 
 " }}}
+
+" Indent guides
+"
+let g:indent_guides_auto_colors = 0
+call s:HL('IndentGuidesOdd',  '', 'lightgravel')
+call s:HL('IndentGuidesEven', '', 'lightgravel')
 
